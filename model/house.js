@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const houseSchema = Schema({
   type: String,
+  image: String,
   price: Number,
   size: Number,
   location: String
