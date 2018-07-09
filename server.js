@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcrypt");
+const morgan = require("morgan");
 
 //middleware
 app.use(express.urlencoded({ extended: false }));
