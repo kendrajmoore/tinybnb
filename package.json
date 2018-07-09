@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/kendrajmoore/tinybnb#readme",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-router": "0.0.1",
     "method-override": "^2.3.10",
     "mongoose": "^5.2.1"
   }

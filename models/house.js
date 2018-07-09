@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const houseSchema = new mongoose.Schema({
+const houseSchema = Schema({
   type: String,
   image: String,
   price: Number,
@@ -9,6 +9,4 @@ const houseSchema = new mongoose.Schema({
   location: String
 });
 
-const House = mongoose.model("House", houseSchema);
-
-module.exports = House;
+module.exports = mongoose.model("House", houseSchema);
