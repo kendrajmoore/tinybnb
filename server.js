@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const PORT = process.env.PORT || 3000;
-const House = require("./model/house.js");
+const House = require("./models/house.js");
 
 //middleware
 app.use(express.urlencoded({ extended: false }));
@@ -53,9 +53,12 @@ app.get("/house/seed", (req, res) => {
 });
 
 app.get("/house", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", {
+    House: House
+  });
 });
 
+console.log(House);
 app.get("/house/new", (req, res) => {
   res.render("new.ejs");
 });
@@ -85,7 +88,7 @@ app.get("/house/:id/edit", (req, res) => {
 });
 
 app.put("/house/:id", (req, res) => {
-  House.findByIdAndUpdate(req.params.id, req.body, (err, house) => {
+  house.findByIdAndUpdate(req.params.id, req.body, (err, house) => {
     res.redirect("/house");
   });
 });
