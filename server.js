@@ -16,6 +16,7 @@ app.use(express.static("public"));
 
 const House = require("./models/house.js");
 const User = require("./models/user.js");
+const seed = require("./models/seed.js");
 
 const userController = require("./controllers/users.js");
 app.use("/user", userController);
@@ -47,7 +48,3 @@ mongoose.Promise = global.Promise;
 mongoose.connection.on("open", () => {
   console.log("connected to mongoose");
 });
-
-db.on("error", err => console.log(err.message + " is Mongod not running?"));
-db.on("connected", () => console.log("mongo connected: ", mongoURI));
-db.on("disconnected", () => console.log("mongo disconnected"));

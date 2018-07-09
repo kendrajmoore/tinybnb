@@ -6,9 +6,9 @@ const House = require("../models/house.js");
 router.get("/house", (req, res) => {
   res.render("index.ejs");
 });
-new router.get("/new", (req, res) => {
-  res.render("new.ejs");
-});
+// new router.get("/new", (req, res) => {
+//   res.render("new.ejs");
+// });
 
 router.post("/", (req, res) => {
   House.create(req.body, (error, house) => {
