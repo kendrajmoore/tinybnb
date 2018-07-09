@@ -51,9 +51,16 @@ app.get("/house/seed", (req, res) => {
     }
   );
 });
+app.get("/", (req, res) => {
+  res.render("login.ejs");
+});
+
+app.get("/register", (req, res) => {
+  res.render("register.ejs");
+});
 
 app.get("/house", (req, res) => {
-  res.render("login.ejs");
+  res.render("index.ejs");
 });
 
 console.log(House);
