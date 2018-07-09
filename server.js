@@ -53,9 +53,7 @@ app.get("/house/seed", (req, res) => {
 });
 
 app.get("/house", (req, res) => {
-  res.render("index.ejs", {
-    House: House
-  });
+  res.render("login.ejs");
 });
 
 console.log(House);
