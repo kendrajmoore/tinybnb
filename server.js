@@ -38,6 +38,10 @@ app.get("/seedHouse", (req, res) => {
   });
 });
 
+app.get("/user/", (req, res) => {
+  res.render("landing.ejs");
+});
+
 //port
 app.listen(PORT, () => {
   console.log("listening.....");
