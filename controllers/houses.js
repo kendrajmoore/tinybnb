@@ -17,7 +17,7 @@ router.get("/new", (req, res) => {
 
 router.post("/", (req, res) => {
   House.create(req.body, (error, house) => {
-    res.redirect("houses/house.ejs");
+    res.redirect("houses/index.ejs");
   });
 });
 
@@ -33,7 +33,9 @@ router.get("/:id", (req, res) => {
 //Edit
 router.get("/:id/edit", (req, res) => {
   House.findById(req.params.id, (err, house) => {
-    res.render("houses/edit.ejs");
+    res.render("houses/edit.ejs", {
+      house: house
+    });
   });
 });
 

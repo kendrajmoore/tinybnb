@@ -10,7 +10,10 @@
 <body>
   <h1>Add a New Listing</h1>
   <form action="/house" method="POST">
-    Type: <input type="text" name="type" /><br/> Price: <input type="text" name="price" /><br/> Size: <input type="text" name="size" /><br/> Location: <input type="text" name="location" /><br/>
+    Type: <input type="text" name="type" value="<%=house.type%>"/><br/>
+   Price: <input type="text" name="price"  value="<%=house.price%>" /><br/>
+   Size: <input type="text" name="size" value="<%=house.size%>"/><br/>
+   Location: <input type="text" name="location" value="<%=house.location%>" /><br/>
 
     <input type="submit" value="Add" />
   </form>
