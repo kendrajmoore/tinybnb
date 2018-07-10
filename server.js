@@ -39,9 +39,8 @@ const db = mongoose.connection;
 //seed route
 app.get("/seedHouse", (req, res) => {
   House.create(seed, (err, createdHouses) => {
-    // logs created users
     console.log(createdHouses);
-    // redirects to index
+
     res.redirect("/");
   });
 });

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const houseSchema = Schema({
+const houseSchema = new Schema({
   type: String,
   image: String,
   price: Number,

@@ -4,7 +4,9 @@ const House = require("../models/house.js");
 
 //index;
 router.get("/", (req, res) => {
-  res.render("./houses/index.ejs");
+  res.render("./houses/index.ejs", {
+    House: House
+  });
 });
 router.get("/new", (req, res) => {
   res.render("./houses/new.ejs");
