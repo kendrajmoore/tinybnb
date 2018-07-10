@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
     });
   });
 });
+//new
 router.get("/new", (req, res) => {
   res.render("houses/new.ejs");
 });
@@ -23,7 +24,9 @@ router.post("/", (req, res) => {
 //show
 router.get("/:id", (req, res) => {
   House.findById(req.params.id, (error, house) => {
-    res.render("./houses/show.ejs");
+    res.render("houses/show.ejs", {
+      house: house
+    });
   });
 });
 

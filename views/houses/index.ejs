@@ -6,18 +6,17 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
-
-    </div>
+    <div class="container2">
 <% for(let i = 0; i < house.length; i++){ %>
   <div class="listing">
+      <img src="<%=house[i].image%>" >
     <a href="/house/<%=house[i].id%>">
-      <%=house[i].type; %><br>
-        <%=house[i].price; %><br>
-          <%=house[i].size; %><br>
-            <%=house[i].location; %><br>
+      <h4><%=house[i].type; %></h4>
+        <h4><%=house[i].price; %></h4>
+          <h4><%=house[i].size; %></h4>
+          <h4> <%=house[i].location; %></h4>
 
-
+</div>
 
   <% } %>
 </div>
