@@ -7,7 +7,8 @@ const houseSchema = new Schema({
   image: String,
   price: Number,
   size: Number,
-  location: String
+  location: String,
+  user: { type: Schema.Types.ObjectId, ref: "User", required: false }
   // house: [UserSchema]
 });
 
