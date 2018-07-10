@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   res.render("landing.ejs");
 });
 
-router.get("/register", (req, res) => {
+router.get("/new", (req, res) => {
   res.render("register.ejs");
 });
 
@@ -21,21 +21,6 @@ router.post("/", (req, res) => {
     res.redirect("/login");
   });
 });
-//handle sign up logic
-// router.post("/register", (req, res) => {
-//   const newUser = new User({ username: req.body.username });
-//   if (req.body.adminCode === process.env.ADMIN_CODE) {
-//     newUser.isAdmin = true;
-//   }
-//   User.register(newUser, req.body.password, (err, user) => {
-//     if (err) {
-//       console.log(err);
-//       return res.render("register.ejs", { error: err.message });
-//     }
-//
-//     res.redirect("/house");
-//   });
-// });
 
 //show login form
 router.get("/login", (req, res) => {
@@ -44,12 +29,5 @@ router.get("/login", (req, res) => {
 
 //handling login logic
 router.post("/login.ejs", (req, res) => {});
-
-// logout route
-router.get("/logout.ejs", (req, res) => {
-  req.logout();
-  req.flash("success", "See you later!");
-  res.redirect("/house");
-});
 
 module.exports = router;

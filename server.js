@@ -34,6 +34,9 @@ app.use("/user", userController);
 const houseController = require("./controllers/houses.js");
 app.use("/house", houseController);
 
+const sessionsController = require("./controllers/sessions.js");
+app.use("/sessions", sessionsController);
+
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/tinybnb";
 const db = mongoose.connection;
 //
