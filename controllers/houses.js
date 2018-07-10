@@ -3,7 +3,7 @@ const router = express.Router();
 const House = require("../models/house.js");
 
 //index;
-router.get("/house", (req, res) => {
+router.get("/", (req, res) => {
   res.render("./houses/index.ejs");
 });
 router.get("/new", (req, res) => {

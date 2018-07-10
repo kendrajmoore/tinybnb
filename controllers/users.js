@@ -8,9 +8,8 @@ router.get("/", (req, res) => {
   res.render("landing.ejs");
 });
 
-// show register form
 router.get("/register", (req, res) => {
-  res.render("register.ejs", { page: "register" });
+  res.render("register.ejs");
 });
 
 router.post("/", (req, res) => {

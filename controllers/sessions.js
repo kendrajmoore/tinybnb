@@ -4,7 +4,7 @@ const User = require("../models/users.js");
 const bcrypt = require("bcrypt");
 
 router.get("/new", (req, res) => {
-  res.render("sessions/new.ejs");
+  res.render("login.ejs");
 });
 
 router.post("/", (req, res) => {
@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
     (err, foundUser) => {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentuser = foundUser;
-        res.redirect("/");
+        res.redirect("/user/register");
       } else {
         res.send("wrong password");
       }

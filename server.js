@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const session = require("express-session");
 const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcrypt");
 const morgan = require("morgan");
@@ -11,6 +12,13 @@ const morgan = require("morgan");
 //middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+app.use(
+  session({
+    secret: "feedmeseymour", //some random string
+    resave: false,
+    saveUninitialized: false
+  })
+);
 
 // static files middleware
 app.use(express.static("public"));
