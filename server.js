@@ -38,7 +38,7 @@ app.get("/seedHouse", (req, res) => {
   });
 });
 
-app.get("/user/", (req, res) => {
+app.get("/", (req, res) => {
   res.render("landing.ejs");
 });
 
