@@ -4,12 +4,14 @@ const House = require("../models/house.js");
 
 //index;
 router.get("/", (req, res) => {
-  res.render("./houses/index.ejs", {
-    House: House
+  House.find({}, (err, house) => {
+    res.render("houses/index.ejs", {
+      house: house
+    });
   });
 });
 router.get("/new", (req, res) => {
-  res.render("./houses/new.ejs");
+  res.render("houses/new.ejs");
 });
 
 router.post("/", (req, res) => {

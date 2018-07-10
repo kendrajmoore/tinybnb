@@ -24,9 +24,8 @@ app.use(
 // static files middleware
 app.use(express.static("public"));
 
-const House = require("./models/house.js");
-const User = require("./models/user.js");
-const seed = require("./models/seed.js");
+const house = require("./models/house.js");
+const user = require("./models/user.js");
 
 const userController = require("./controllers/users.js");
 app.use("/user", userController);
@@ -40,18 +39,16 @@ app.use("/sessions", sessionsController);
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/tinybnb";
 const db = mongoose.connection;
 //
-//seed route
-app.get("/seedHouse", (req, res) => {
-  House.create(seed, (err, createdHouses) => {
-    console.log(createdHouses);
-
-    res.redirect("/");
-  });
-});
 
 app.get("/", (req, res) => {
   res.render("landing.ejs");
 });
+//
+// app.get("/", (req, res) => {
+//   res.render("index.ejs", {
+//     currentUser: req.session.currentUser
+//   });
+// });
 
 //port
 app.listen(PORT, () => {

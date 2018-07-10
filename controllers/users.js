@@ -22,12 +22,4 @@ router.post("/", (req, res) => {
   });
 });
 
-//show login form
-router.get("/login", (req, res) => {
-  res.render("login.ejs", { page: "login" });
-});
-
-//handling login logic
-router.post("/login.ejs", (req, res) => {});
-
 module.exports = router;
