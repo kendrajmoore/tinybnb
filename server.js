@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const env = require("dotenv").config();
 const session = require("express-session");
 const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcrypt");
