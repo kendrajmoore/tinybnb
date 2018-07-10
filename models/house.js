@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+// const User = require("./user.js");
 
 const houseSchema = new Schema({
   type: String,
@@ -7,6 +8,7 @@ const houseSchema = new Schema({
   price: Number,
   size: Number,
   location: String
+  // house: [UserSchema]
 });
 
 module.exports = mongoose.model("House", houseSchema);
