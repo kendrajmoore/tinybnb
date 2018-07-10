@@ -10,12 +10,28 @@
 <body>
   <h1>Add a New Listing</h1>
   <form action="/house" method="POST">
-    Type: <input type="text" name="type" value="<%=house.type%>"/><br/>
-   Price: <input type="text" name="price"  value="<%=house.price%>" /><br/>
-   Size: <input type="text" name="size" value="<%=house.size%>"/><br/>
-   Location: <input type="text" name="location" value="<%=house.location%>" /><br/>
+      <div class="form-group">
+         <label for="type">Type</label>
+   <input type="text" name="type"/><br/>
+     </div>
+     <div class="form-group">
+        <label for="type">Image</label>
+   <input type="text" name="type"/><br/>
+ </div>
+ <div class="form-group">
+    <label for="type">Price</label>
+   <input type="text" name="price" /><br/>
+ </div>
+ <div class="form-group">
+    <label for="type">Size</label>
+    <input type="text" name="size"/><br/>
+  </div>
+  <div class="form-group">
+     <label for="type">Location</label>
+ <input type="text" name="location" /><br/>
+</div>
+    <input class="btn btn-primary" type="submit" value="Add" />
 
-    <input type="submit" value="Add" />
   </form>
 </body>
 
