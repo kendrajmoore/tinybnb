@@ -8,12 +8,13 @@ router.get("/new", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  // req.body.password = bcrypt.hashSync(
-  //   req.body.password,
-  //   bcrypt.genSaltSync(10)
-  // );
+  req.body.password = bcrypt.hashSync(
+    req.body.password,
+    bcrypt.genSaltSync(10)
+  );
   User.create(req.body, (err, createdUser) => {
     res.redirect("/house");
   });
 });
+
 module.exports = router;
