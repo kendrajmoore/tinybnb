@@ -14,11 +14,13 @@ router.get("/new", (req, res) => {
 //Create a user
 
 router.post("/", (req, res) => {
+  console.log(req.body);
   User.findOne(
     {
       username: req.body.username
     },
     (err, foundUser) => {
+      console.log(foundUser);
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentuser = foundUser;
         res.redirect("/");

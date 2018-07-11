@@ -6,7 +6,7 @@ const House = require("./house.js");
 const UserSchema = new Schema({
   createdAt: { type: Date },
   updatedAt: { type: Date },
-  password: { type: String, select: false },
+  password: { type: String },
   username: { type: String, required: true }
   // house: [House.schema]
 });
