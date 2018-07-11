@@ -13,6 +13,11 @@
       <h4><%=house.price; %></h4>
         <h4><%=house.size; %></h4>
         <h4> <%=house.location; %></h4>
+        <form action="/<%=house.id; %>?_method=DELETE" method="POST">
+              <input type="submit" value="DELETE" />
+            </form>
+            <a href="/house/<%=house.id; %>/edit">Edit</a><br>
+            <a href="/house">Back</a><br>
   </body>
 </html>
 

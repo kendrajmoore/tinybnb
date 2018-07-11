@@ -10,9 +10,15 @@ h1 {
   margin: 0 0 10px 0;
 }
 
-form {
-  padding: 40px 0 0 0;
+.form-group {
+  width: 100%;
 }
+
+.form-group2 {
+  padding: 5px 0 0 250px;
+  width: 100%;
+}
+
 .footer {
   width: 100%;
   position: fixed;
@@ -34,8 +40,4 @@ form {
   height: 400px;
   width: 300px;
   margin: 20px 0 0 0;
-}
-
-.form-group {
-  width: 100%;
 }

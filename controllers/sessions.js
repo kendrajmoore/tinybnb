@@ -8,14 +8,14 @@ router.get("/new", (req, res) => {
 
 router.post("/", (req, res) => {
   User.findOne({ username: req.body.username }, (err, foundUser) => {
-    if (req.body.password == foundUser.password) {
-      res.send("logged in");
+    if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+      req.session.currentUser = foundUser;
+      res.redirect("/");
     } else {
       res.send("wrong password");
     }
   });
 });
-
 router.delete("/", (req, res) => {
   req.session.destroy(() => {
     res.redirect("/");
