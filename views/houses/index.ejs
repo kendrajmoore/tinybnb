@@ -10,11 +10,14 @@
 <% for(let i = 0; i < house.length; i++){ %>
   <div class="listing">
       <h4><%=house[i].type; %></h4>
+        <div class="show">
       <a href="/house/<%=house[i].id%>">
     <img src="<%=house[i].image%>" /></a>
+  </div>
       <h4>Price: <%=house[i].price; %></h4>
       <h4>Size(sqft): <%=house[i].size; %></h4>
     <h4>Location: <%=house[i].location; %></h4>
+      <h4>Quantity: <%=house[i].qty; %></h4>
 
 </div>
 

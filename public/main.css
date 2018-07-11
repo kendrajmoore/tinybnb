@@ -21,9 +21,14 @@ img {
 }
 
 .show img {
-  padding: 0 0 0 50px;
+  padding: 5px 0 0 75px;
+  width: 200px;
 }
 
+.show2 img {
+  margin: 0 0 0 350px;
+  width: 200px;
+}
 a.btn.btn-success {
   margin: 0 0 0 350px;
 }

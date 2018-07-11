@@ -52,5 +52,15 @@ router.delete("/house/:id", (req, res) => {
     res.redirect("/house");
   });
 });
+//book a house
+// products.put('/:id/buy', (req, res) => {
+//   Product.findByIdAndUpdate(req.params.id, {$inc: { qty: -1 }}, (err) => {
+//     if (err) {
+//       res.send(err.message)
+//     } else {
+//       res.redirect('back')
+//     }
+//   })
+// })
 
 module.exports = router;
