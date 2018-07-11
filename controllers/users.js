@@ -13,6 +13,7 @@ router.post("/", (req, res) => {
     bcrypt.genSaltSync(10)
   );
   User.create(req.body, (err, createdUser) => {
+    console.log(createdUser);
     res.redirect("/house");
   });
 });

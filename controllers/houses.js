@@ -47,20 +47,21 @@ router.put("/:id", (req, res) => {
   });
 });
 //delete
-router.delete("/house/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
+  console.log("hey");
   House.findByIdAndRemove(req.params.id, (err, house) => {
     res.redirect("/house");
   });
 });
 //book a house
-// products.put('/:id/buy', (req, res) => {
-//   Product.findByIdAndUpdate(req.params.id, {$inc: { qty: -1 }}, (err) => {
-//     if (err) {
-//       res.send(err.message)
-//     } else {
-//       res.redirect('back')
-//     }
-//   })
-// })
+router.put("/:id/buy", (req, res) => {
+  House.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, err => {
+    if (err) {
+      res.send(err.message);
+    } else {
+      res.redirect("back");
+    }
+  });
+});
 
 module.exports = router;

@@ -49,6 +49,7 @@ a.btn.btn-success {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+  padding: 20px 0 0 0;
 }
 
 .container2 {
@@ -58,9 +59,13 @@ a.btn.btn-success {
   justify-content: space-between;
 }
 
+.container3 {
+  padding: 20px 0 0 0;
+}
 .listing {
   background-color: gray;
   height: 400px;
   width: 300px;
   margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
 }
