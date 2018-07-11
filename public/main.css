@@ -18,7 +18,14 @@ h4 {
 img {
   height: 200px;
   width: 200px;
-  margin: 20px 0 0 50px;
+}
+
+.show img {
+  padding: 0 0 0 50px;
+}
+
+a.btn.btn-success {
+  margin: 0 0 0 350px;
 }
 
 .form-group {

@@ -7,17 +7,20 @@
   </head>
   <body>
     <h1>House Information</h1>
+    <div class="show">
+  <a href="/house/<%=house.id%>">
     <img src="<%=house.image%>" ><br>
-  <a href="/house/<%=house.id%>"></a>
-    <h4><%=house.type; %></h4>
-      <h4><%=house.price; %></h4>
-        <h4><%=house.size; %></h4>
-        <h4> <%=house.location; %></h4>
+  </a>
+    <h4>Type: <%=house.type; %></h4>
+      <h4>Price: <%=house.price; %></h4>
+        <h4>Size(sqft): <%=house.size; %></h4>
+        <h4>Location: <%=house.location; %></h4>
         <form action="/house/<%=house.id; %>?_method=DELETE" method="POST">
               <input type="submit" value="DELETE" />
             </form>
-            <a href="/house/<%=house.id; %>/edit">Edit</a><br>
-            <a href="/house">Back</a><br>
+            <a class="btn btn-success" href="/house/<%=house.id; %>/edit">Edit</a><br>
+            <a class="btn btn-success" href="/house">Back</a><br>
+          </div>
   </body>
 </html>
 
