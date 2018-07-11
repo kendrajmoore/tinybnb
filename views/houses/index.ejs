@@ -9,12 +9,12 @@
     <div class="container2">
 <% for(let i = 0; i < house.length; i++){ %>
   <div class="listing">
-    <img src="<%=house[i].image%>" >
-    <a href="/house/<%=house[i].id%>">
       <h4><%=house[i].type; %></h4>
-      <h4><%=house[i].price; %></h4>
-      <h4><%=house[i].size; %></h4>
-    <h4> <%=house[i].location; %></h4>
+      <a href="/house/<%=house[i].id%>">
+    <img src="<%=house[i].image%>" ></a>
+      <h4>Price: <%=house[i].price; %></h4>
+      <h4>Size(sqft): <%=house[i].size; %></h4>
+    <h4>Location: <%=house[i].location; %></h4>
 
 </div>
 
