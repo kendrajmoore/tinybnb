@@ -17,7 +17,9 @@ router.get("/new", (req, res) => {
 
 router.post("/", (req, res) => {
   House.create(req.body, (error, house) => {
-    res.redirect("houses/index.ejs");
+    res.render("houses/show.ejs", {
+      house: house
+    });
   });
 });
 
