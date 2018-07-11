@@ -1,4 +1,4 @@
-//app
+//node modules
 
 const express = require("express");
 const app = express();
@@ -23,10 +23,10 @@ app.use(
 
 // static files middleware
 app.use(express.static("public"));
-
+//allow models
 const house = require("./models/house.js");
 const user = require("./models/user.js");
-
+//allow controllers
 const userController = require("./controllers/users.js");
 app.use("/user", userController);
 
@@ -35,15 +35,15 @@ app.use("/house", houseController);
 
 const sessionsController = require("./controllers/sessions.js");
 app.use("/sessions", sessionsController);
-
+//set up database
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/tinybnb";
 const db = mongoose.connection;
 //
-
+//index route
 app.get("/", (req, res) => {
   res.render("landing.ejs");
 });
-
+//404 page
 app.get("*", (req, res) => {
   res.render("error/index.ejs");
 });
