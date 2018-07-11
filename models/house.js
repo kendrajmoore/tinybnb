@@ -8,7 +8,7 @@ const houseSchema = new Schema({
   price: Number,
   size: Number,
   location: String,
-  user: [User.schema]
+  users: [User.schema]
 });
 
 module.exports = mongoose.model("House", houseSchema);

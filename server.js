@@ -43,6 +43,10 @@ const db = mongoose.connection;
 app.get("/", (req, res) => {
   res.render("landing.ejs");
 });
+
+app.get("*", (req, res) => {
+  res.render("error/index.ejs");
+});
 //
 // app.get("/", (req, res) => {
 //   res.render("index.ejs", {

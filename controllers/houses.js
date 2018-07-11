@@ -43,13 +43,13 @@ router.get("/:id/edit", (req, res) => {
 
 router.put("/:id", (req, res) => {
   House.findByIdAndUpdate(req.params.id, req.body, (err, house) => {
-    res.redirect("./houses/house");
+    res.redirect("houses/house.ejs");
   });
 });
 //delete
-router.delete("/:id", (req, res) => {
+router.delete("/house/:id", (req, res) => {
   House.findByIdAndRemove(req.params.id, (err, house) => {
-    res.redirect("./houses/house"); //redirect back to fruits index
+    res.redirect("/house");
   });
 });
 
