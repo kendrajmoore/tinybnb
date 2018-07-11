@@ -43,7 +43,7 @@ router.get("/:id/edit", (req, res) => {
 
 router.put("/:id", (req, res) => {
   House.findByIdAndUpdate(req.params.id, req.body, (err, house) => {
-    res.redirect("houses/house.ejs");
+    res.redirect("/house");
   });
 });
 //delete

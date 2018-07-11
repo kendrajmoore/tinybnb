@@ -6,7 +6,7 @@
     <title></title>
   </head>
   <body>
-    <form action="/house" method="POST">
+    <form action="/house/<%=house.id%>?_method=PUT" method="POST">
         <div class="form-group">
            <label for="type">Type</label>
      <input type="text" name="type" value="<%=house.type%>"/><br/>
