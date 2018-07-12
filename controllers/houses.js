@@ -35,6 +35,7 @@ router.get("/:id", (req, res) => {
 //Edit
 router.get("/:id/edit", (req, res) => {
   House.findById(req.params.id, (err, house) => {
+    console.log(house.id);
     res.render("houses/edit.ejs", {
       house: house
     });
@@ -42,7 +43,10 @@ router.get("/:id/edit", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
+  console.log(req.body);
+  console.log(req.params.id);
   House.findByIdAndUpdate(req.params.id, req.body, (err, house) => {
+    console.log(err);
     res.redirect("/house");
   });
 });
