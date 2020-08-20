@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/kendrajmoore/tinybnb#readme",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
